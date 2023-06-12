@@ -1,0 +1,32 @@
+.home-layout {
+  display: grid;
+  grid-template-areas:
+    "home     search-bar search-bar details"
+    "children children   children   children";
+
+  align-items: center;
+}
+
+.home {
+  grid-area: home;
+
+  display: flex;
+  justify-content: center;
+}
+
+.search-bar {
+  grid-area: search-bar;
+
+  display: flex;
+  gap: 1em;
+}
+
+.details {
+  grid-area: details;
+
+  justify-self: end;
+}
+
+.children {
+  grid-area: children;
+}
