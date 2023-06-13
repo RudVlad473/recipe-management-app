@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "title": "Chocolate Chip Cookies",
     "description": "Delicious homemade chocolate chip cookies.",
     "ingredients": [
@@ -26,6 +27,7 @@
     "imageUrl": "https://example.com/chocolate-chip-cookies.jpg"
   },
   {
+    "id": 2,
     "title": "Chicken Alfredo Pasta",
     "description": "Creamy and flavorful chicken alfredo pasta dish.",
     "ingredients": [
@@ -54,6 +56,7 @@
     "imageUrl": "https://example.com/chicken-alfredo-pasta.jpg"
   },
   {
+    "id": 3,
     "title": "Greek Salad",
     "description": "Refreshing and healthy Greek salad with feta cheese and olives.",
     "ingredients": [
@@ -77,6 +80,7 @@
     "imageUrl": "https://example.com/greek-salad.jpg"
   },
   {
+    "id": 4,
     "title": "Spaghetti Bolognese",
     "description": "Classic Italian spaghetti with a rich meat sauce.",
     "ingredients": [
@@ -108,6 +112,7 @@
     "imageUrl": "https://example.com/spaghetti-bolognese.jpg"
   },
   {
+    "id": 5,
     "title": "Banana Bread",
     "description": "Moist and delicious homemade banana bread.",
     "ingredients": [
@@ -137,6 +142,7 @@
     "imageUrl": "https://example.com/banana-bread.jpg"
   },
   {
+    "id": 6,
     "title": "Caprese Salad",
     "description": "Simple and refreshing Caprese salad with tomatoes, mozzarella, and basil.",
     "ingredients": [
@@ -157,6 +163,7 @@
     "imageUrl": "https://example.com/caprese-salad.jpg"
   },
   {
+    "id": 7,
     "title": "Grilled Salmon",
     "description": "Healthy and flavorful grilled salmon fillets.",
     "ingredients": [
@@ -182,6 +189,7 @@
     "imageUrl": "https://example.com/grilled-salmon.jpg"
   },
   {
+    "id": 8,
     "title": "Caesar Salad",
     "description": "Classic Caesar salad with homemade dressing and crispy croutons.",
     "ingredients": [
@@ -204,6 +212,7 @@
     "imageUrl": "https://example.com/caesar-salad.jpg"
   },
   {
+    "id": 9,
     "title": "Pancakes",
     "description": "Fluffy and delicious homemade pancakes.",
     "ingredients": [
@@ -229,6 +238,7 @@
     "imageUrl": "https://example.com/pancakes.jpg"
   },
   {
+    "id": 10,
     "title": "Margarita Pizza",
     "description": "Classic margarita pizza with fresh tomatoes, mozzarella, and basil.",
     "ingredients": [
@@ -255,6 +265,7 @@
     "imageUrl": "https://example.com/margarita-pizza.jpg"
   },
   {
+    "id": 11,
     "title": "Chicken Noodle Soup",
     "description": "Comforting and hearty chicken noodle soup.",
     "ingredients": [
