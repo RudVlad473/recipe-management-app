@@ -31,7 +31,7 @@ export function useFilteredRecipes() {
 
       const filterPayload = filters[filterName]
 
-      filteredRecipes = recipes.filter((recipe) => filterCallback(recipe, filterPayload))
+      filteredRecipes = filteredRecipes.filter((recipe) => filterCallback(recipe, filterPayload))
     }
 
     return filteredRecipes

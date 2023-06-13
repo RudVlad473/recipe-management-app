@@ -25,7 +25,7 @@ export const filtersSlice = createSlice({
         for (const key in action.payload) {
           const property = key as keyof TFilters
 
-          state[property] = getDefaultValue<(typeof state)[typeof property]>()
+          state[property] = action.payload[property]
         }
       }
     },

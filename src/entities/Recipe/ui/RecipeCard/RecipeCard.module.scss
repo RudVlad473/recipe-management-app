@@ -1,13 +1,27 @@
+@use "../../../../shared/lib/stylesheets/abstracts/" as *;
+
 .recipe {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+
+  justify-content: flex-end;
 
   padding: 0.5em;
 
   border-radius: 0.5em;
 
   background-color: white;
+
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    cursor: pointer;
+
+    scale: 1.05;
+  }
 }
 
 .image {
@@ -20,4 +34,23 @@
 }
 
 .click {
+}
+
+.star {
+  background-color: white;
+  border-radius: 50%;
+  padding: 0.25em;
+
+  $star-inset: 0.5em;
+
+  position: absolute;
+  top: $star-inset;
+  right: $star-inset;
+
+  transition: all 0.15s ease-in-out;
+
+  &:hover {
+    scale: 1.1;
+    background-color: $red-100;
+  }
 }
