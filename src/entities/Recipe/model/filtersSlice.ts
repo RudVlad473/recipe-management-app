@@ -5,9 +5,9 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
 export type TFilters = Pick<TRecipe, "title" | "ingredients">
 
-type DropFiltersPayload = {
+type DropFiltersPayload = Partial<{
   [key in keyof TFilters]: boolean
-}
+}>
 
 const initialState: TFilters = {
   title: "",

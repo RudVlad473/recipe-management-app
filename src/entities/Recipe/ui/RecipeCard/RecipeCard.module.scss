@@ -1,13 +1,12 @@
 @use "../../../../shared/lib/stylesheets/abstracts/" as *;
 
 .recipe {
-  position: relative;
-
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 0.5em;
 
-  justify-content: flex-end;
+  position: relative;
 
   padding: 0.5em;
 
@@ -31,15 +30,27 @@
 }
 
 .title {
+  font-weight: $bold;
+  text-align: center;
 }
 
 .click {
+  font-size: 0.75em;
 }
 
 .star {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   background-color: white;
   border-radius: 50%;
+  border: 1px solid black;
   padding: 0.25em;
+
+  width: 40px;
+
+  aspect-ratio: 1;
 
   $star-inset: 0.5em;
 

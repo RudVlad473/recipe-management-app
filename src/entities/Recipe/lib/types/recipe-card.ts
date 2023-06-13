@@ -1,3 +1,3 @@
 import { TRecipe } from "."
 
-export type TRecipeCard = Pick<TRecipe, "title" | "imageUrl" | "description">
+export type TRecipeCard = Pick<TRecipe, "id" | "title" | "imageUrl" | "description">
