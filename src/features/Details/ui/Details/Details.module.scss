@@ -1,8 +1,46 @@
+@use '../../../../shared/lib/stylesheets/abstracts/' as *;
+
 .details {
+  position: relative;
+
   display: flex;
-  gap: 0.5em;
+  gap: 1em;
+}
+
+.detail {
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  padding: 0.5em;
+
+  background-color: white;
+}
+
+.auth-modal,
+.recipes-modal {
+  position: absolute;
+  top: -100%;
+  right: 0;
+
+  transition: all 0.75s ease-in-out;
+
+  padding: 1em;
+
+  border-radius: 0.5em;
+  border: 1px solid $gray-400;
+
+  background-color: white;
 }
 
 .auth-modal {
-  
+  &--open {
+    top: 10%;
+  }
+}
+
+.recipes-modal {
+  &--open {
+    top: 10%;
+  }
 }
