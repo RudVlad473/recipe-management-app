@@ -1,0 +1,15 @@
+@use "../../../../shared/lib/stylesheets/abstracts/" as *;
+
+.recipe {
+  display: flex;
+  gap: 0.5em;
+
+  padding: 0.25em;
+}
+
+.title {
+  font-weight: $bold;
+}
+
+.desc {
+}
