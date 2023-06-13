@@ -1,13 +1,13 @@
+import { DeleteOutlined } from "@ant-design/icons"
+import { Tooltip } from "antd"
+import { FC } from "react"
 import { useAppDispatch, useAppSelector } from "../../app/lib"
 import { useFilteredRecipes } from "../../entities/Recipe/lib/hooks"
 import { dropFilters, selectFilters } from "../../entities/Recipe/model/filtersSlice"
 import { RecipeList } from "../../entities/Recipe/ui/RecipeList"
-import { anyValueFull, anyValueTruthy } from "../../shared/lib/utils"
+import { anyValueFull } from "../../shared/lib/utils"
 import { FiltersTable } from "../../widgets/FiltersTable/ui/FiltersTable"
 import styles from "./Home.module.scss"
-import { DeleteOutlined } from "@ant-design/icons"
-import { Tooltip } from "antd"
-import { FC } from "react"
 
 export const Home: FC = () => {
   const dispatch = useAppDispatch()

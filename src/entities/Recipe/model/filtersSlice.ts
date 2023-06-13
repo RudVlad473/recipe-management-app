@@ -1,7 +1,7 @@
-import { RootState } from "../../../app/lib"
-import { anyValueFull, anyValueTruthy, getDefaultValue } from "../../../shared/lib/utils"
-import { TRecipe } from "../lib/types"
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
+import { RootState } from "../../../app/lib"
+import { anyValueFull, getDefaultValue } from "../../../shared/lib/utils"
+import { TRecipe } from "../lib/types"
 
 export type TFilters = Pick<TRecipe, "title" | "ingredients" | "cookingTimeMin">
 

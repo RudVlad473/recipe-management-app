@@ -14,7 +14,7 @@ export const FiltersTable: FC = () => {
         <h3>Pick time of cooking</h3>
         <Select
           style={{ width: 120 }}
-          onChange={(value, option) => {
+          onChange={(value) => {
             const time = parseInt(value)
 
             dispatch(

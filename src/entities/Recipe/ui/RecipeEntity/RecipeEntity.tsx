@@ -6,7 +6,7 @@ import { FC } from "react"
 
 type RecipeEntityProps = TRecipeCard
 
-export const RecipeEntity: FC<RecipeEntityProps> = ({ description, id, title, imageUrl }) => {
+export const RecipeEntity: FC<RecipeEntityProps> = ({ description, title }) => {
   return (
     <section className={classNames(styles.recipe, "ellipsis")}>
       <Tooltip title={title}>
