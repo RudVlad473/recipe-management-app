@@ -1,0 +1,17 @@
+.auth {
+}
+
+.switch-btn {
+  display: flex;
+  justify-content: center;
+
+  margin-inline: auto;
+  padding: 0.5em;
+}
+
+.signed-in {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
