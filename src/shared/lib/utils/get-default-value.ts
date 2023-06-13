@@ -1,6 +1,4 @@
 export function getDefaultValue<T>(value: T): T {
-  console.log({ value })
-
   if (typeof value === "string") {
     return "" as T
   } else if (typeof value === "number") {
