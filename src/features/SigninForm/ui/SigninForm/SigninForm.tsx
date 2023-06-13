@@ -1,9 +1,8 @@
-import { Button, Form, Input } from "antd"
-import { FC } from "react"
-
 import { SigninUser } from "../../../../entities/User/lib/types"
 import { AuthErrorMessages } from "../../../../widgets/Auth/lib/error-messages"
 import { useSignin } from "../../lib/hooks"
+import { Button, Form, Input } from "antd"
+import { FC } from "react"
 
 export const SigninForm: FC = () => {
   const [form] = Form.useForm()
@@ -39,7 +38,10 @@ export const SigninForm: FC = () => {
       </Form.Item>
 
       <Form.Item wrapperCol={{ offset: 8, span: 16 }}>
-        <Button type="primary" htmlType="submit" disabled={isLoading}>
+        <Button
+          type="primary"
+          htmlType="submit"
+          disabled={isLoading}>
           Submit
         </Button>
       </Form.Item>
