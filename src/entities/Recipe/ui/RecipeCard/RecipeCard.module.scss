@@ -2,6 +2,7 @@
 
 .recipe {
   display: flex;
+  flex-direction: column;
 
   gap: 0.5em;
 
@@ -15,15 +16,6 @@
 
   transition: all 0.15s ease-in-out;
 
-  &--card {
-    flex-direction: column;
-    justify-content: flex-end;
-  }
-
-  &--compact {
-    flex-direction: row;
-    align-items: center;
-  }
 
   &:hover {
     cursor: pointer;
@@ -33,6 +25,11 @@
 }
 
 .image {
+  margin-bottom: auto;
+
+  max-width: 150px;
+
+  margin-inline: auto;
 }
 
 .desc {
@@ -68,6 +65,12 @@
   right: $star-inset;
 
   transition: all 0.15s ease-in-out;
+
+  &--disabled {
+    background-color: $blue-100;
+
+    pointer-events: none;
+  }
 
   &:hover {
     scale: 1.1;
