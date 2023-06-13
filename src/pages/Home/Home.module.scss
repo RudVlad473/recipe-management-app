@@ -13,6 +13,13 @@
   display: flex;
   flex-direction: column;
   gap: 1em;
+
+  &__header {
+    display: flex;
+    gap: 1em;
+
+    font-size: 1.5em;
+  }
 }
 
 .main {
