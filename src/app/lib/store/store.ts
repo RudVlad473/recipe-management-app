@@ -1,9 +1,10 @@
+import { AppDispatch, RootState } from "."
+import { recipeReducer } from "../../../entities/Recipe/model"
+import { authReducer } from "../../../entities/User/model"
 import { combineReducers, configureStore } from "@reduxjs/toolkit"
+import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux"
 import { persistReducer, persistStore } from "redux-persist"
 import storage from "redux-persist/lib/storage"
-
-// import { apiSlice } from "../../../shared/api"
-// import { authReducer } from "../../../widgets/Auth/model"
 
 const persistConfig = {
   key: "root",
@@ -12,8 +13,8 @@ const persistConfig = {
 }
 
 export const rootReducer = combineReducers({
-  // [apiSlice.reducerPath]: apiSlice.reducer,
-  // auth: authReducer,
+  auth: authReducer,
+  recipes: recipeReducer,
 })
 
 export const persistedReducer = persistReducer({ ...persistConfig }, rootReducer)
@@ -24,3 +25,6 @@ export const store = configureStore({
 })
 
 export const persistor = persistStore(store)
+
+export const useAppDispatch: () => AppDispatch = useDispatch
+export const useAppSelector: TypedUseSelectorHook<RootState> = useSelector
