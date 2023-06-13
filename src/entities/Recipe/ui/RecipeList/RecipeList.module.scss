@@ -1,0 +1,9 @@
+$recipe-card-width: 200px;
+
+.recipe-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1fr, $recipe-card-width));
+  gap: 1em;
+
+  padding: 1em;
+}
