@@ -5,16 +5,20 @@ import { TRecipe } from "../types"
 import { useMemo } from "react"
 
 const recipeFilter: Partial<Record<keyof TRecipe, (recipe: TRecipe, payload: any) => boolean>> = {
-  title: ({ title }, payload: string) => title.toLowerCase().includes(payload.toLowerCase()),
-  ingredients: ({ ingredients }, payload: string[]) =>
-    payload.every((ingredient) => ingredients.includes(ingredient)),
+  title: ({ title }, partialTitle: string) =>
+    title.toLowerCase().includes(partialTitle.toLowerCase()),
+  ingredients: ({ ingredients }, payloadIngredients: string[]) =>
+    payloadIngredients.every((ingredient) => ingredients.includes(ingredient)),
+  cookingTimeMin: ({ cookingTimeMin }, payloadTime: number) => cookingTimeMin === payloadTime,
 }
 
 export function useFilteredRecipes() {
   const filters = useAppSelector(selectFilters)
 
   const finalRecipes = useMemo(() => {
-    if (!filters) {
+    const anyFilterProvided = Object.values(filters).filter((v) => v).length > 0
+
+    if (!filters || !anyFilterProvided) {
       return recipes
     }
 
@@ -24,12 +28,11 @@ export function useFilteredRecipes() {
       const filterName = key as keyof TFilters
 
       const filterCallback = recipeFilter[filterName]
+      const filterPayload = filters[filterName]
 
-      if (!filterCallback) {
+      if (!filterCallback || !filterPayload) {
         continue
       }
-
-      const filterPayload = filters[filterName]
 
       filteredRecipes = filteredRecipes.filter((recipe) => filterCallback(recipe, filterPayload))
     }
