@@ -1,0 +1,42 @@
+[
+  {
+    "username": "john_doe",
+    "password": "password123"
+  },
+  {
+    "username": "alice_smith",
+    "password": "secret@456"
+  },
+  {
+    "username": "bob_jackson",
+    "password": "p@ssw0rd"
+  },
+  {
+    "username": "emma_wilson",
+    "password": "hello123"
+  },
+  {
+    "username": "michael_adams",
+    "password": "test4321"
+  },
+  {
+    "username": "sophia_miller",
+    "password": "abc@123"
+  },
+  {
+    "username": "david_walker",
+    "password": "qwerty"
+  },
+  {
+    "username": "olivia_hall",
+    "password": "pass1234"
+  },
+  {
+    "username": "alexander_baker",
+    "password": "securepwd"
+  },
+  {
+    "username": "natalie_clark",
+    "password": "letmein"
+  }
+]
