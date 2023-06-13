@@ -5,13 +5,16 @@
   grid-template-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0.5em;
+
+  max-width: 500px;
 }
 
 .recipe {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+
+  gap: 1em;
+
   max-width: 100%;
 
   padding: 0.5em;
