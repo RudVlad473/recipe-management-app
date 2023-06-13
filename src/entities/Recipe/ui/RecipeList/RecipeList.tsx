@@ -16,7 +16,9 @@ export const RecipeList: FC<RecipeListProps> = ({ recipes }) => {
   return (
     <ul className={styles["recipe-list"]}>
       {recipes.map((recipe) => (
-        <RecipeCard {...recipe} />
+        <li key={recipe.id}>
+          <RecipeCard {...recipe} />
+        </li>
       ))}
     </ul>
   )
