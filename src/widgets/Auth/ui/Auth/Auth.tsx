@@ -1,18 +1,14 @@
-import { Button } from "antd"
-import { FC, useCallback, useState } from "react"
-import { toast } from "react-toastify"
 import { useAppDispatch, useAppSelector } from "../../../../app/lib"
 import users from "../../../../entities/User/lib/data/user.json"
 import { TUser } from "../../../../entities/User/lib/types"
-import {
-  dropCredentials,
-  selectIsLoggedIn,
-  setCredentials
-} from "../../../../entities/User/model"
+import { dropCredentials, selectIsLoggedIn, setCredentials } from "../../../../entities/User/model"
 import { AuthForm } from "../../../../features/AuthForm/ui"
 import { CredentialsCard } from "../../../../features/CredentialsCard/ui"
 import { FormType } from "../../lib/types"
 import styles from "./Auth.module.scss"
+import { Button } from "antd"
+import { FC, useCallback, useState } from "react"
+import { toast } from "react-toastify"
 
 export const Auth: FC = () => {
   const dispatch = useAppDispatch()
@@ -29,9 +25,6 @@ export const Auth: FC = () => {
 
   const handleSignin = useCallback(
     (user: TUser) => {
-      console.log(user)
-      console.log(users[0])
-
       const areCredentialsCorrect = users.some(({ password, username }) => {
         return password == user.password && username == user.username
       })
