@@ -1,8 +1,8 @@
 .home-layout {
   display: grid;
   grid-template-areas:
-    "home     search-bar search-bar details"
-    "children children   children   children";
+    "search-bar search-bar details"
+    "children   children   children";
 
   align-items: center;
 }
