@@ -1,0 +1,1 @@
+export { FiltersTable } from "./FiltersTable"
