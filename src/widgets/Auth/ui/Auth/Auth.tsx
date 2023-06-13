@@ -1,7 +1,12 @@
 import { useAppDispatch, useAppSelector } from "../../../../app/lib"
 import users from "../../../../entities/User/lib/data/user.json"
 import { TUser } from "../../../../entities/User/lib/types"
-import { dropCredentials, selectCredentials, setCredentials } from "../../../../entities/User/model"
+import {
+  dropCredentials,
+  selectCredentials,
+  selectIsLoggedIn,
+  setCredentials,
+} from "../../../../entities/User/model"
 import { AuthForm } from "../../../../features/AuthForm/ui"
 import { CredentialsCard } from "../../../../features/CredentialsCard/ui"
 import { FormType } from "../../lib/types"
@@ -15,7 +20,7 @@ export const Auth: FC = () => {
 
   const [formType, setFormType] = useState<FormType>("SIGN_IN")
 
-  const credentials = useAppSelector(selectCredentials)
+  const isLoggedIn = useAppSelector(selectIsLoggedIn)
 
   const isSignin = formType === "SIGN_IN"
 
@@ -25,9 +30,12 @@ export const Auth: FC = () => {
 
   const handleSignin = useCallback(
     (user: TUser) => {
-      const areCredentialsCorrect = users.some(
-        ({ password, username }) => password === user.password && username === user.username
-      )
+      console.log(user)
+      console.log(users[0])
+
+      const areCredentialsCorrect = users.some(({ password, username }) => {
+        return password == user.password && username == user.username
+      })
 
       if (areCredentialsCorrect) {
         dispatch(setCredentials(user))
@@ -51,7 +59,7 @@ export const Auth: FC = () => {
 
   return (
     <>
-      {credentials ? (
+      {isLoggedIn ? (
         <div className={styles["signed-in"]}>
           <CredentialsCard />
           <Button
