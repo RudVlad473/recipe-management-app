@@ -19,4 +19,6 @@ This is a test-task. The requirement were provided is [this document](https://do
 
 The requirements, that were satisfied by my implementation are listed in [this document](https://docs.google.com/document/d/1QQ3ir5OBOiduDzHwj1_Z1E8NszFIuz3q/edit).
 
-I completed this task in about 7.5 hours. [Deployment](https://recipe-management-app-six.vercel.app/) took ~30 minutes
+I completed this task in about 7.5 hours. [Deployment](https://recipe-management-app-six.vercel.app/) took ~30 minutes.
+
+I also reused some functionality (components, hooks, functions) from [one of my previous projects](https://github.com/RudVlad473/internet-store-client-application).
