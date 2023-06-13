@@ -1,11 +1,14 @@
 import { useAppDispatch, useAppSelector } from "../../../../app/lib"
-import { selectCredentials } from "../../../../entities/User/model"
-import { SigninForm } from "../../../../features/SigninForm/ui"
-import { SignupForm } from "../../../../features/SignupForm/ui"
+import users from "../../../../entities/User/lib/data/user.json"
+import { TUser } from "../../../../entities/User/lib/types"
+import { dropCredentials, selectCredentials, setCredentials } from "../../../../entities/User/model"
+import { AuthForm } from "../../../../features/AuthForm/ui"
+import { CredentialsCard } from "../../../../features/CredentialsCard/ui"
 import { FormType } from "../../lib/types"
 import styles from "./Auth.module.scss"
 import { Button } from "antd"
-import { FC, useState } from "react"
+import { FC, useCallback, useState } from "react"
+import { toast } from "react-toastify"
 
 export const Auth: FC = () => {
   const dispatch = useAppDispatch()
@@ -20,6 +23,32 @@ export const Auth: FC = () => {
     setFormType(isSignin ? "SIGN_UP" : "SIGN_IN")
   }
 
+  const handleSignin = useCallback(
+    (user: TUser) => {
+      const areCredentialsCorrect = users.some(
+        ({ password, username }) => password === user.password && username === user.username
+      )
+
+      if (areCredentialsCorrect) {
+        dispatch(setCredentials(user))
+
+        toast.success("You've been signed in!")
+      } else {
+        toast.error("Credentials are wrong, try again")
+      }
+    },
+    [dispatch]
+  )
+
+  const handleSignup = useCallback(
+    (user: TUser) => {
+      dispatch(setCredentials(user))
+
+      toast.success("You've been signed up!")
+    },
+    [dispatch]
+  )
+
   return (
     <>
       {credentials ? (
@@ -27,9 +56,7 @@ export const Auth: FC = () => {
           <CredentialsCard />
           <Button
             type="primary"
-            onClick={() => {
-              dispatch(dropAccessToken())
-            }}>
+            onClick={() => dispatch(dropCredentials())}>
             Logout
           </Button>
         </div>
@@ -42,7 +69,7 @@ export const Auth: FC = () => {
               {isSignin ? "Sign up" : "Sign in"}
             </Button>
           </div>
-          {isSignin ? <SigninForm /> : <SignupForm />}
+          <AuthForm onFinish={isSignin ? handleSignin : handleSignup} />
         </div>
       )}
     </>
