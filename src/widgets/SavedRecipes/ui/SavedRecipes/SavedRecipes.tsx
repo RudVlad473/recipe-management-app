@@ -8,7 +8,9 @@ export const SavedRecipes: FC = () => {
   return (
     <ul>
       {recipes.map((recipe) => (
-        <></>
+        <li>
+          
+        </li>
       ))}
     </ul>
   )

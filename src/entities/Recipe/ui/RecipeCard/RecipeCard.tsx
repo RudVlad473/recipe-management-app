@@ -8,9 +8,17 @@ import { Image } from "antd"
 import classNames from "classnames"
 import { FC } from "react"
 
-type RecipeCardProps = TRecipeCard
+type RecipeCardProps = TRecipeCard & {
+  type?: "CARD" | "COMPACT"
+}
 
-export const RecipeCard: FC<RecipeCardProps> = ({ id, description, title, imageUrl }) => {
+export const RecipeCard: FC<RecipeCardProps> = ({
+  id,
+  description,
+  title,
+  imageUrl,
+  type = "CARD",
+}) => {
   const dispatch = useAppDispatch()
 
   const isLoggedIn = useAppSelector(selectIsLoggedIn)
@@ -20,7 +28,16 @@ export const RecipeCard: FC<RecipeCardProps> = ({ id, description, title, imageU
   }
 
   return (
-    <section className={classNames(styles["recipe"])}>
+    <section
+      className={classNames(
+        styles["recipe"],
+        {
+          [styles["recipe--card"]]: type === "CARD",
+        },
+        {
+          [styles["recipe--compact"]]: type === "COMPACT",
+        }
+      )}>
       <div className={styles.image}>
         {
           <Image
