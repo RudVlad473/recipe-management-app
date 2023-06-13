@@ -1,10 +1,12 @@
-import { FC } from "react"
-import recipes from "../../entities/Recipe/lib/data/recipes.json"
+import { useFilteredRecipes } from "../../entities/Recipe/lib/hooks"
 import { RecipeList } from "../../entities/Recipe/ui/RecipeList"
 import { FiltersTable } from "../../widgets/FiltersTable/ui/FiltersTable"
 import styles from "./Home.module.scss"
+import { FC } from "react"
 
 export const Home: FC = () => {
+  const { recipes } = useFilteredRecipes()
+
   return (
     <div className={styles.content}>
       <aside className={styles.sider}>
