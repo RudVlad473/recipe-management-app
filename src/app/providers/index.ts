@@ -1,8 +1,6 @@
-import compose from "compose-function"
-
-import { withAppContext } from "./withAppContext"
 import { withRedux } from "./withRedux"
 import { withReduxPersist } from "./withReduxPersist"
 import { withToastify } from "./withToastify"
+import compose from "compose-function"
 
-export const withProviders = compose(withRedux, withReduxPersist, withAppContext, withToastify)
+export const withProviders = compose(withRedux, withReduxPersist, withToastify)
