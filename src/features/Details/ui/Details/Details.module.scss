@@ -1,4 +1,4 @@
-@use '../../../../shared/lib/stylesheets/abstracts/' as *;
+@use "../../../../shared/lib/stylesheets/abstracts/" as *;
 
 .details {
   position: relative;
@@ -36,11 +36,15 @@
 .auth-modal {
   &--open {
     top: 10%;
+
+    right: 2.5%;
   }
 }
 
 .recipes-modal {
   &--open {
     top: 10%;
+
+    right: 10%;
   }
 }
