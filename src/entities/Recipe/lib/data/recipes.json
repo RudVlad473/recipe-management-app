@@ -24,7 +24,8 @@
       "Bake for 9-11 minutes or until golden brown.",
       "Allow cookies to cool on baking sheets for 2 minutes, then transfer to wire racks to cool completely."
     ],
-    "imageUrl": "https://www.allrecipes.com/thmb/6nqNtp49mWLyPt-sX9dbRvcbkgc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6711176-the-perfect-chocolate-chip-cookie-Ella-Marie-4x3-1-8da322d8da584ea090bdcf9cac95e8ab.jpg"
+    "imageUrl": "https://www.allrecipes.com/thmb/6nqNtp49mWLyPt-sX9dbRvcbkgc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/6711176-the-perfect-chocolate-chip-cookie-Ella-Marie-4x3-1-8da322d8da584ea090bdcf9cac95e8ab.jpg",
+    "cookingTimeMin": 15
   },
   {
     "id": 2,
@@ -53,7 +54,8 @@
       "Add cooked fettuccine pasta and sliced chicken to the skillet. Toss to coat the pasta and chicken with the sauce.",
       "Garnish with fresh parsley before serving."
     ],
-    "imageUrl": "https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg"
+    "imageUrl": "https://assets.epicurious.com/photos/5988e3458e3ab375fe3c0caf/1:1/w_3607,h_3607,c_limit/How-to-Make-Chicken-Alfredo-Pasta-hero-02082017.jpg",
+    "cookingTimeMin": 10
   },
   {
     "id": 3,
@@ -77,7 +79,8 @@
       "Drizzle the dressing over the salad and toss to coat evenly.",
       "Serve immediately."
     ],
-    "imageUrl": "https://example.com/greek-salad.jpg"
+    "imageUrl": "https://i2.wp.com/www.downshiftology.com/wp-content/uploads/2018/08/Greek-Salad-main.jpg",
+    "cookingTimeMin": 25
   },
   {
     "id": 4,
@@ -109,7 +112,8 @@
       "Serve the sauce over the cooked spaghetti.",
       "Garnish with fresh parsley and grated Parmesan cheese before serving."
     ],
-    "imageUrl": "https://example.com/spaghetti-bolognese.jpg"
+    "imageUrl": "https://www.kitchensanctuary.com/wp-content/uploads/2019/09/Spaghetti-Bolognese-square-FS-0204-500x500.jpg",
+    "cookingTimeMin": 8
   },
   {
     "id": 5,
@@ -139,7 +143,8 @@
       "Bake for 60-65 minutes or until a toothpick inserted into the center comes out clean.",
       "Allow the banana bread to cool in the pan for 10 minutes, then remove it from the pan and let it cool completely on a wire rack."
     ],
-    "imageUrl": "https://example.com/banana-bread.jpg"
+    "imageUrl": "https://hips.hearstapps.com/hmg-prod/images/delish-230313-banana-bread-0343-eb-index-6421dc80bf49b.jpg?crop=0.8893463715903243xw:1xh;center,top&resize=1200:*",
+    "cookingTimeMin": 5
   },
   {
     "id": 6,
@@ -160,7 +165,8 @@
       "Drizzle the dressing over the salad.",
       "Serve immediately."
     ],
-    "imageUrl": "https://example.com/caprese-salad.jpg"
+    "imageUrl": "https://assets.epicurious.com/photos/628ba560cf19fbfe9137ffa4/3:2/w_6948,h_4632,c_limit/Caprese_RECIPE_051922_34205.jpg",
+    "cookingTimeMin": 30
   },
   {
     "id": 7,
@@ -186,7 +192,8 @@
       "Remove the salmon from the grill and serve with lemon wedges.",
       "Garnish with fresh dill sprigs before serving."
     ],
-    "imageUrl": "https://example.com/grilled-salmon.jpg"
+    "imageUrl": "https://www.acouplecooks.com/wp-content/uploads/2020/05/Grilled-Salmon-015-1.jpg",
+    "cookingTimeMin": 20
   },
   {
     "id": 8,
@@ -209,7 +216,8 @@
       "Pour the dressing over the salad and toss to coat evenly.",
       "Serve immediately."
     ],
-    "imageUrl": "https://example.com/caesar-salad.jpg"
+    "imageUrl": "https://www.seriouseats.com/thmb/Fi_FEyVa3_-_uzfXh6OdLrzal2M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/the-best-caesar-salad-recipe-06-40e70f549ba2489db09355abd62f79a9.jpg",
+    "cookingTimeMin": 15
   },
   {
     "id": 9,
@@ -235,7 +243,8 @@
       "Repeat with the remaining batter.",
       "Serve the pancakes warm with your choice of toppings."
     ],
-    "imageUrl": "https://example.com/pancakes.jpg"
+    "imageUrl": "https://www.allrecipes.com/thmb/WqWggh6NwG-r8PoeA3OfW908FUY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/21014-Good-old-Fashioned-Pancakes-mfs_001-1fa26bcdedc345f182537d95b6cf92d8.jpg",
+    "cookingTimeMin": 20
   },
   {
     "id": 10,
@@ -262,7 +271,8 @@
       "Bake the pizza in the preheated oven according to the package instructions, or until the crust is golden brown and the cheese is bubbly and slightly browned.",
       "Remove the pizza from the oven and let it cool for a few minutes before slicing and serving."
     ],
-    "imageUrl": "https://example.com/margarita-pizza.jpg"
+    "imageUrl": "https://www.onceuponachef.com/images/2020/06/Margherita-Pizza-scaled.jpg",
+    "cookingTimeMin": 45
   },
   {
     "id": 11,
@@ -291,6 +301,7 @@
       "Remove the bay leaf from the soup.",
       "Garnish with fresh parsley before serving."
     ],
-    "imageUrl": "https://example.com/chicken-noodle-soup.jpg"
+    "imageUrl": "https://www.onceuponachef.com/images/2022/10/chicken-noodle-soup.jpg",
+    "cookingTimeMin": 15
   }
 ]
