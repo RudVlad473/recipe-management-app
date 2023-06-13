@@ -1,19 +1,18 @@
+import { Button } from "antd"
+import { FC, useCallback, useState } from "react"
+import { toast } from "react-toastify"
 import { useAppDispatch, useAppSelector } from "../../../../app/lib"
 import users from "../../../../entities/User/lib/data/user.json"
 import { TUser } from "../../../../entities/User/lib/types"
 import {
   dropCredentials,
-  selectCredentials,
   selectIsLoggedIn,
-  setCredentials,
+  setCredentials
 } from "../../../../entities/User/model"
 import { AuthForm } from "../../../../features/AuthForm/ui"
 import { CredentialsCard } from "../../../../features/CredentialsCard/ui"
 import { FormType } from "../../lib/types"
 import styles from "./Auth.module.scss"
-import { Button } from "antd"
-import { FC, useCallback, useState } from "react"
-import { toast } from "react-toastify"
 
 export const Auth: FC = () => {
   const dispatch = useAppDispatch()

@@ -38,7 +38,7 @@ export const filtersSlice = createSlice({
       for (const key in keys) {
         const property = key as keyof TFilters
 
-        state[property] = getDefaultValue<(typeof state)[typeof property]>()
+        state[property] = getDefaultValue(state[property])
       }
     },
   },
