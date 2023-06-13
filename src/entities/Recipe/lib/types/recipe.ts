@@ -5,4 +5,5 @@ export type TRecipe = {
   ingredients: string[]
   instructions: string[]
   imageUrl?: string
+  cookingTimeMin: number
 }
