@@ -19,7 +19,11 @@ export const recipeSlice = createSlice({
     },
 
     removeRecipe: (state, action: PayloadAction<TRecipeId>) => {
-      state = state.filter(({ id }) => id === action.payload.id)
+      const index = state.findIndex(({ id }) => id === action.payload.id)
+
+      if (index !== -1) {
+        state.splice(index, 1)
+      }
     },
   },
 })
@@ -29,4 +33,8 @@ export const { reducer: recipeReducer } = recipeSlice
 
 export const selectRecipes = (state: RootState) => {
   return state.recipes
+}
+
+export const selectRecipesCount = (state: RootState) => {
+  return state.recipes.length
 }

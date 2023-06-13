@@ -1,9 +1,9 @@
 import { RootState } from "../../../app/lib"
-import { getDefaultValue } from "../../../shared/lib/utils"
+import { anyValueFull, anyValueTruthy, getDefaultValue } from "../../../shared/lib/utils"
 import { TRecipe } from "../lib/types"
 import { PayloadAction, createSlice } from "@reduxjs/toolkit"
 
-export type TFilters = Pick<TRecipe, "title" | "ingredients">
+export type TFilters = Pick<TRecipe, "title" | "ingredients" | "cookingTimeMin">
 
 type DropFiltersPayload = Partial<{
   [key in keyof TFilters]: boolean
@@ -12,6 +12,7 @@ type DropFiltersPayload = Partial<{
 const initialState: TFilters = {
   title: "",
   ingredients: [],
+  cookingTimeMin: 0,
 }
 
 export const filtersSlice = createSlice({
@@ -19,26 +20,22 @@ export const filtersSlice = createSlice({
   initialState,
   reducers: {
     appendFilters: (state, action: PayloadAction<Partial<TFilters>>) => {
-      const anyFilterProvided = Object.values(action.payload).filter((v) => v).length > 0
+      const anyFilterProvided = anyValueFull(action.payload)
 
       if (anyFilterProvided) {
         for (const key in action.payload) {
-          const property = key as keyof TFilters
-
-          state[property] = action.payload[property]
+          state[key] = action.payload[key]
         }
       }
     },
 
     dropFilters: (state, action: PayloadAction<DropFiltersPayload>) => {
-      const anyFilterProvided = Object.values(action.payload).filter((v) => v).length > 0
+      const anyFilterProvided = anyValueFull(action.payload)
 
       const keys = anyFilterProvided ? action.payload : state
 
       for (const key in keys) {
-        const property = key as keyof TFilters
-
-        state[property] = getDefaultValue(state[property])
+        state[key] = getDefaultValue(state[key])
       }
     },
   },
